@@ -1,38 +1,360 @@
-.App {
-  text-align: center;
-}
+.Overall {
+  margin: 0;
+  padding: 1rem;
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
   min-height: 100vh;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+
+	background-color: #f9ecec;
+
+  display: grid;
+  grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+  grid-template-rows: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+
+  justify-items: center;
+  align-items: center;
+
+  font-family: Helvetica, sans-serif;
+  font-weight: lighter;
+}
+
+.Page-Title {
+  grid-row: 1/2;
+  grid-column: 1/11;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+}
+
+.Pokémon-Logo-Box {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.Pokémon-Logo {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  height: 85px;
+  justify-content: right;
+  align-self: right;
+  justify-content: right;
+}
+
+.Horoscope-Title {
+  grid-row: 2/3;
+  grid-column: 2/10;
+
+  margin: 0;
+  padding: 10px;
+  margin-top: 40px;
+
+  background-color: #f0d9da;
+  border-radius: 25px;
+  text-align: center;
+  color: #c19898;
+  font-family:'Lucida Grande', sans-serif;
+  font-size: 20px;
+  font-weight: lighter;
+}
+
+.Search-Bar {
+  grid-row: 2/3;
+  grid-column: 6/10;
+
+  display: flex;
+  justify-items: center;
+  align-self: center;
+
+  margin-left: 30px;
+  border-radius: 25px;
+
+  background-color:#ecf2f9;
+  color: darkgrey;
+}
+
+.Search-Input {
+  padding: 0.5rem;
+  font-size: 1rem;
+
+  background-color: #ecf2f9;
+  color: darkgrey;
+
+  max-width: 100%;
+  width: 300px;
+
+  border-radius: 25px;
+  border: transparent;
+
+  cursor: text;
+}
+
+.Search-Button {
+  background: none;
+  border: none;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  padding: 0;
+  cursor: pointer;
+}
+
+.Search-Icon {
+  width: 22px;
+  height: 22px;
+}
+
+.Pokémon-Horoscope {
+  grid-row: 2/3;
+  grid-column: 2/6;
+
+  display: flex;
+  justify-content: center;
+  align-items: left;
+
+  margin-right: 30px;
+  border-radius: 25px;
+
+  max-width: 100%;
+  width: 450px;
+  background-color: #f9ecec;
+}
+
+.Birthday-Input {
+  margin-right: 2px;
+  padding-left: 5px;
+  
+  max-width: 100%;
+  width: 250px;
+
+  background-color: #ecf2f9;
+  color: darkgrey;
+  border-radius: 25px;
+  border: transparent;
+
+  font-size: 1rem;
+  font-family: 'Lucida Sans', sans-serif;
+}
+  
+.Horoscope {
+  margin-left: 2px;
+  padding: 0px;
+
+  max-width: 100%;
+  width: 100px;
+
+  border-color: transparent;
+  border-radius: 25px;
+  background-color: #c8d9eb;
+  color: darkgrey;
+  cursor: pointer;
+}
+
+.Pokémon-Not-Found {
+  grid-row: 3/10;
+  grid-column: 2/6;
+
   display: flex;
   flex-direction: column;
+  justify-items: center;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+  padding: 10px;
+
+  color: red;
+
+  background-color: #f0d9da;
+  border-radius: 25px;
+  border-style: solid;
+  border-width: 3px;
+  border-color: #c8d9eb;
 }
 
-.App-link {
-  color: #61dafb;
+.Pokémon-Data-Not-Found {
+  display: flex;
+    flex-direction: column;
+    justify-items: center;
+
+    padding: 10px; 
+    border-radius: 25px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #c8d9eb;
+    background-color: #ecf2f9;
+    line-height: 3px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Not-Found-Icon {
+  width: 50px;
+  height: 50px;
+  margin: 0px 10px 10px 10px;
+}
+
+.Pokémon-Chart {
+  margin-top: 20px;
+
+  grid-row: 3/10;
+  grid-column: 2/6;
+
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+
+  padding: 10px 30px 30px 20px;
+
+  background-color: #ecf2f9;
+  border-radius: 25px;
+  border-style: solid;
+  border-width: 3px;
+  border-color: #f0d9da;
+}
+
+.Name-And-Heart {
+  margin-left: 5px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color: #3a4042;
+}
+
+.Pokémon-Image {
+  width: 200px;
+  height: 200px;
+}
+
+.Pokémon-Data {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+
+    padding: 10px; 
+    border-radius: 25px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #c8d9eb;
+    background-color: #f0d9da;
+    line-height: 3px;
+}
+
+.Pokémon-ID {
+  width: 17px;
+  height: 17px;
+  margin-right: 10px;
+  font-family: 'Lucida Sans', monospace;
+}
+
+.Pokémon-Type {
+  width: 17px;
+  height: 17px;
+  margin-right: 10px;
+  font-family: 'Lucida Sans', monospace;
+}
+
+.Pokémon-Height {
+  width: 17px;
+  height: 17px;
+  margin-right: 10px;
+  font-family: 'Lucida Sans', monospace;
+}
+
+.Is-Favorite {
+  width: 25px;
+  height: 25px;
+
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+
+  background-color: #f0d9da;
+  border-radius: 5px;
+  border-style: solid;
+  border-color: #f0d9da;
+
+  padding: 3px;
+}
+
+.Heart {
+  width: 15px;
+  height: 15px;
+  padding-top: 1px;
+}
+
+.Favorites-List {
+  grid-row: 3/10;
+  grid-column: 6/10;
+
+  padding-right: 15px;
+
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  justify-content: space-between;
+
+  max-height: 475px;
+  overflow-y: auto;
+  width: 500px;
+
+  border-radius: 25px;
+  border-style: solid;
+  border-color: #f0d9da;
+
+  background-color: #F4E9CD;
+}
+
+.Favorites-List-Title {
+  justify-self: center;
+  align-self: center;
+  align-items: center;
+  margin-bottom: 20px;
+  color: #3a4042;
+}
+
+.Favorites-List-Icon {
+  width: 15px;
+  height: 15px;
+  background-color: #f0d9da;
+  border-radius: 4px;
+  border-style: solid;
+  border-color: #f0d9da;
+  padding: 2px;
+  margin-right: 10px;
+}
+
+.Favorite-Pokémon {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Is-Not-Favorite {
+  height: 25px;
+}
+
+.Favorite-Pokémon-Image {
+  width: 50px;
+  margin-right: 8px;
+}
+
+.Trash-Can {
+  height: 15px;
+  padding-top: 3px;
+}
+
+.Show-Pokémon {
+  background-color: #c8d9eb;
+  border-style: solid;
+  border-color: transparent;
+  border-radius: 25px;
+  padding: 5px;
 }
